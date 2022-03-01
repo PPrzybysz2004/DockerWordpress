@@ -8,8 +8,8 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: zaq1@WSX
-            MYSQL_DATABASE: wordpress
             MYSQL_USER: wordpress1
+            MYSQL_DATABASE: wordpress
             MYSQL_PASSWORD: zaq1@WSX
     wordpress:
         depends_on:
