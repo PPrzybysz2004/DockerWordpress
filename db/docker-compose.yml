@@ -1,0 +1,22 @@
+version: '3.0'
+
+networks:
+    backend:
+        name: 'backend'
+
+services:
+    db:
+        image: mysql:5.7
+        volumes: 
+            - db_data:/var/lib/mysql
+        restart: always
+        networks:
+            - 'backend'
+        environment:
+            MYSQL_ROOT_PASSWORD: zaq1@WSX
+            MYSQL_USER: wordpress1
+            MYSQL_DATABASE: wordpress
+            MYSQL_PASSWORD: zaq1@WSX
+
+volumes:
+    db_data: {}
