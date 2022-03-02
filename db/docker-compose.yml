@@ -2,7 +2,7 @@ version: '3.0'
 
 networks:
     backend:
-        name: 'backend'
+        name: 'sc'
 
 services:
     db:
@@ -14,8 +14,8 @@ services:
             - 'backend'
         environment:
             MYSQL_ROOT_PASSWORD: zaq1@WSX
-            MYSQL_USER: wordpress1
-            MYSQL_DATABASE: wordpress
+            MYSQL_USER: uczestnik
+            MYSQL_DATABASE: baza
             MYSQL_PASSWORD: zaq1@WSX
 
 volumes:

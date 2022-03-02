@@ -1,0 +1,22 @@
+version: '3.0'
+
+networks:
+    backend:
+        name: 'sc'
+
+services:
+    drupal:
+        image: drupal:latest
+        restart: always
+        ports: 
+            - "8000:80"
+        networks:
+            - 'backend'
+        volumes:
+            - /var/www/html/modules
+            - /var/www/html/sites
+            - /var/www/html/profiles
+            - /var/www/html/themes
+
+volumes:
+    db_data: {}

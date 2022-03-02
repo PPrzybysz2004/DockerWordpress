@@ -2,7 +2,7 @@ version: '3.0'
 
 networks:
     backend:
-        name: 'backend'
+        name: 'sc'
 
 services:
     wordpress:
@@ -13,9 +13,9 @@ services:
             - "8000:80"
         restart: always
         environment:
-            WORDPRESS_DB_USER: wordpress1
+            WORDPRESS_DB_USER: uczestnik
             WORDPRESS_DB_PASSWORD: zaq1@WSX
-            WORDPRESS_DB_NAME: wordpress
+            WORDPRESS_DB_NAME: baza
             WORDPRESS_DB_HOST: db:3306
 
 volumes:
